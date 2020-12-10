@@ -66,10 +66,11 @@ public class Racional {
             //se resume en:
             this.denominador *= numero.getDenominador();
         }
-        
+
         System.out.println("Suma: " + this.numerador + "/" + this.denominador);
     }
-        public void resta(Racional numero) {
+
+    public void resta(Racional numero) {
 
         if (numero.getDenominador() == this.denominador) {
             this.numerador -= numero.getNumerador();
@@ -82,7 +83,14 @@ public class Racional {
             //se resume en:
             this.denominador *= numero.getDenominador();
         }
-        
+
         System.out.println("Resta: " + this.numerador + "/" + this.denominador);
     }
+
+    public void producto(Racional numero) {
+
+        this.numerador *= numero.getNumerador();//a*c
+        this.denominador *= numero.getDenominador();//b*d
+    }
+    
 }
