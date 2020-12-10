@@ -26,4 +26,13 @@ public class Relacional {
             this.denominador=1;
         }
     }
+
+    public int getNumerador() {
+        return numerador;
+    }
+
+    public int getDenominador() {
+        return denominador;
+    }
+    
 }
