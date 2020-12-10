@@ -29,6 +29,8 @@ public class AppRacional {
         System.out.println("Suma:\n");
         z.suma(k).imprimirConsola();//z.suma(k) es un racional, entonces imprimimos eser racional por consola
         
-        
+        System.out.println("Division:\n");
+        Racional division = z.division(k);
+        division.imprimirConsola();
     }
 }
