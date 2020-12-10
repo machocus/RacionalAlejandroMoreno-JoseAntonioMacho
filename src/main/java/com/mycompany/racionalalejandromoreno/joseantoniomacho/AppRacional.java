@@ -9,14 +9,8 @@ package com.mycompany.racionalalejandromoreno.joseantoniomacho;
  *
  * @author aleja
  */
-public class claseDePrueba {
+public class AppRacional {
     public static void main(String[] args) {
-        
-        Racional numero1 = new Racional(8, 0);
-        
-        Racional numero2 = new Racional(9, 4);
-        
-        numero1.suma(numero2);
         
     }
 }
