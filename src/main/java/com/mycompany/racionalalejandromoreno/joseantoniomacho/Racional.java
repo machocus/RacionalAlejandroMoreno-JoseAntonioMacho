@@ -91,12 +91,25 @@ public class Racional {
 
         this.numerador *= x.getNumerador();//a*c
         this.denominador *= x.getDenominador();//b*d
+
+        System.out.println("Multiplicacion: " + this.numerador + "/" + this.denominador);
     }
-    
-      public void division(Racional x) {
+
+    public void division(Racional x) {
 
         this.numerador *= x.getDenominador();//a*d
         this.denominador /= x.getNumerador();//b*c
+
+        System.out.println("Division: " + this.numerador + "/" + this.denominador);
     }
-    
+
+    public void igualdad(Racional x, Racional y) {
+
+        if (x.getNumerador() * y.getDenominador()/* a*d */
+                == x.getDenominador() * y.getNumerador()) { //b*c
+            System.out.println("Son equivalentes");
+        } else {
+            System.out.println("No son equivalentes");
+        }
+    }
 }
