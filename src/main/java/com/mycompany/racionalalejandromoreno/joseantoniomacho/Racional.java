@@ -47,7 +47,7 @@ public class Racional {
     }
 
     public void imprimirConsola() {
-        System.out.println("Número Relacional " + numerador + "/" + denominador);
+        System.out.println("Número Racional: " + numerador + "/" + denominador);
     }
 
     @Override
@@ -55,24 +55,24 @@ public class Racional {
         return numerador + "/" + denominador;
     }
 
-    public void suma(Racional x) {
+    public Racional suma(Racional x) {
 
         if (x.getDenominador() == this.denominador) {
             this.numerador += x.getNumerador();
         } else {
             //operaicon para poner el numerador de la fraccion
-            this.numerador = ( this.numerador * x.getDenominador() )//esto seria el a*d
-                    + ( this.denominador * x.getNumerador() );//esto seria el b*c
+            this.numerador = (this.numerador * x.getDenominador())//esto seria el a*d
+                    + (this.denominador * x.getNumerador());//esto seria el b*c
             //operaciones para el denominador
             //this.denominador = this.denominador * numero.getDenominador();
             //se resume en:
             this.denominador *= x.getDenominador();
         }
 
-        System.out.println("Suma: " + this.numerador + "/" + this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
 
-    public void resta(Racional x) {
+    public Racional resta(Racional x) {
 
         if (x.getDenominador() == this.denominador) {
             this.numerador -= x.getNumerador();
@@ -86,15 +86,15 @@ public class Racional {
             this.denominador *= x.getDenominador();
         }
 
-        System.out.println("Resta: " + this.numerador + "/" + this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
 
-    public void producto(Racional x) {
+    public Racional producto(Racional x) {
 
         this.numerador *= x.getNumerador();//a*c
         this.denominador *= x.getDenominador();//b*d
 
-        System.out.println("Multiplicacion: " + this.numerador + "/" + this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
 
     public Racional division(Racional x) {
@@ -106,20 +106,16 @@ public class Racional {
         return new Racional(this.numerador, this.denominador);
     }
 
-    public static void igualdad(Racional x, Racional y) {
+    public static boolean igualdad(Racional x, Racional y) {
 
-        if (x.getNumerador() * y.getDenominador()/* a*d */
-                == x.getDenominador() * y.getNumerador()) { //b*c
-            System.out.println("Son equivalentes");
-        } else {
-            System.out.println("No son equivalentes");
-        }
+        return (x.getNumerador() * y.getDenominador()) == (x.getDenominador() * y.getNumerador());
     }
 
-    public int aleatorio() {
+    public Racional aleatorio() {
         Random random = new Random();
         this.numerador = random.nextInt();//si queremos que sea entre valores concretos debe ser (100) + 1
         this.denominador = random.nextInt() + 1;// para que no salga 0
-        return this.numerador / this.denominador;
+        return new Racional(this.numerador, this.denominador);
     }
+
 }
