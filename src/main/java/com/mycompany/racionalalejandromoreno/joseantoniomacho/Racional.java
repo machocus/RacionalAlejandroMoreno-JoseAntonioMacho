@@ -117,8 +117,8 @@ public class Racional {
 
     public int aleatorio() {
         Random random = new Random();
-        this.numerador = random.nextInt();
-        this.denominador = random.nextInt() + 1;
+        this.numerador = random.nextInt();//si queremos que sea entre valores concretos debe ser (100) + 1
+        this.denominador = random.nextInt() + 1;// para que no salga 0
         return this.numerador / this.denominador;
     }
 }
