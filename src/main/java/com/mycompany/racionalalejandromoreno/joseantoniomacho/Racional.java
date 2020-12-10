@@ -5,6 +5,8 @@
  */
 package com.mycompany.racionalalejandromoreno.joseantoniomacho;
 
+import java.util.Random;
+
 /**
  *
  * @author aguil
@@ -111,5 +113,12 @@ public class Racional {
         } else {
             System.out.println("No son equivalentes");
         }
+    }
+
+    public int aleatorio() {
+        Random random = new Random();
+        this.numerador = random.nextInt();
+        this.denominador = random.nextInt() + 1;
+        return this.numerador / this.denominador;
     }
 }
