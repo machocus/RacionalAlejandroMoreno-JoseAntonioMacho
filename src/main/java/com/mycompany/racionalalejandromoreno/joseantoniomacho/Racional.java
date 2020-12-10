@@ -61,8 +61,8 @@ public class Racional {
             this.numerador += x.getNumerador();
         } else {
             //operaicon para poner el numerador de la fraccion
-            this.numerador = (this.numerador * x.getDenominador())//esto seria el a*d
-                    + (this.denominador + x.getNumerador());//esto seria el b*c
+            this.numerador = ( this.numerador * x.getDenominador() )//esto seria el a*d
+                    + ( this.denominador * x.getNumerador() );//esto seria el b*c
             //operaciones para el denominador
             //this.denominador = this.denominador * numero.getDenominador();
             //se resume en:
