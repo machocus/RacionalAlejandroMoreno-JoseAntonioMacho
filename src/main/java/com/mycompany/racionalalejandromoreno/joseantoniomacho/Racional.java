@@ -69,4 +69,20 @@ public class Racional {
         
         System.out.println("Suma: " + this.numerador + "/" + this.denominador);
     }
+        public void resta(Racional numero) {
+
+        if (numero.getDenominador() == this.denominador) {
+            this.numerador -= numero.getNumerador();
+        } else {
+            //operaicon para poner el numerador de la fraccion
+            this.numerador = (this.numerador * numero.getDenominador())//esto seria el a*d
+                    - (this.denominador * numero.getNumerador());//esto seria el b*c
+            //operaciones para el denominador
+            //this.denominador = this.denominador * numero.getDenominador();
+            //se resume en:
+            this.denominador *= numero.getDenominador();
+        }
+        
+        System.out.println("Resta: " + this.numerador + "/" + this.denominador);
+    }
 }
