@@ -93,4 +93,10 @@ public class Racional {
         this.denominador *= x.getDenominador();//b*d
     }
     
+      public void division(Racional x) {
+
+        this.numerador *= x.getDenominador();//a*d
+        this.denominador /= x.getNumerador();//b*c
+    }
+    
 }
