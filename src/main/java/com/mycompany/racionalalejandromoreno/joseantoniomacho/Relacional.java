@@ -17,6 +17,13 @@ public class Relacional {
        this.numerador = 1;
        this.denominador = 1;
     }
-    
-    
+
+    public Relacional(int numerador, int denominador) {
+        this.numerador = numerador;
+        this.denominador = denominador;
+        
+        if (denominador==0) {
+            this.denominador=1;
+        }
+    }
 }
