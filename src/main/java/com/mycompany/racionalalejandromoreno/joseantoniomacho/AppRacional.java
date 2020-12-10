@@ -24,5 +24,7 @@ public class AppRacional {
         Racional.igualdad(z, k); //Imprime por pantalla la igualdad de z entre k
         
         z.suma(k);//suma e imprime por pantalla el resultado
-    }
+        
+        Racional division = z.division(k);
+        division.imprimirConsola();
 }

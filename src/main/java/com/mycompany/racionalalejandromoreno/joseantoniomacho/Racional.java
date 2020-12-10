@@ -97,12 +97,13 @@ public class Racional {
         System.out.println("Multiplicacion: " + this.numerador + "/" + this.denominador);
     }
 
-    public void division(Racional x) {
+    public Racional division(Racional x) {
 
         this.numerador *= x.getDenominador();//a*d
         this.denominador /= x.getNumerador();//b*c
 
         System.out.println("Division: " + this.numerador + "/" + this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
 
     public static void igualdad(Racional x, Racional y) {
