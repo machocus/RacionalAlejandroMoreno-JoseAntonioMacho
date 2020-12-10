@@ -53,44 +53,44 @@ public class Racional {
         return numerador + "/" + denominador;
     }
 
-    public void suma(Racional numero) {
+    public void suma(Racional x) {
 
-        if (numero.getDenominador() == this.denominador) {
-            this.numerador += numero.getNumerador();
+        if (x.getDenominador() == this.denominador) {
+            this.numerador += x.getNumerador();
         } else {
             //operaicon para poner el numerador de la fraccion
-            this.numerador = (this.numerador * numero.getDenominador())//esto seria el a*d
-                    + (this.denominador + numero.getNumerador());//esto seria el b*c
+            this.numerador = (this.numerador * x.getDenominador())//esto seria el a*d
+                    + (this.denominador + x.getNumerador());//esto seria el b*c
             //operaciones para el denominador
             //this.denominador = this.denominador * numero.getDenominador();
             //se resume en:
-            this.denominador *= numero.getDenominador();
+            this.denominador *= x.getDenominador();
         }
 
         System.out.println("Suma: " + this.numerador + "/" + this.denominador);
     }
 
-    public void resta(Racional numero) {
+    public void resta(Racional x) {
 
-        if (numero.getDenominador() == this.denominador) {
-            this.numerador -= numero.getNumerador();
+        if (x.getDenominador() == this.denominador) {
+            this.numerador -= x.getNumerador();
         } else {
             //operaicon para poner el numerador de la fraccion
-            this.numerador = (this.numerador * numero.getDenominador())//esto seria el a*d
-                    - (this.denominador * numero.getNumerador());//esto seria el b*c
+            this.numerador = (this.numerador * x.getDenominador())//esto seria el a*d
+                    - (this.denominador * x.getNumerador());//esto seria el b*c
             //operaciones para el denominador
             //this.denominador = this.denominador * numero.getDenominador();
             //se resume en:
-            this.denominador *= numero.getDenominador();
+            this.denominador *= x.getDenominador();
         }
 
         System.out.println("Resta: " + this.numerador + "/" + this.denominador);
     }
 
-    public void producto(Racional numero) {
+    public void producto(Racional x) {
 
-        this.numerador *= numero.getNumerador();//a*c
-        this.denominador *= numero.getDenominador();//b*d
+        this.numerador *= x.getNumerador();//a*c
+        this.denominador *= x.getDenominador();//b*d
     }
     
 }
