@@ -43,6 +43,8 @@ public class Relacional {
         this.denominador = denominador;
     }
     
-    
+    public void imprimirConsola (){
+        System.out.println("Número Relacional "+numerador +"/"+ denominador);
+    }
     
 }
