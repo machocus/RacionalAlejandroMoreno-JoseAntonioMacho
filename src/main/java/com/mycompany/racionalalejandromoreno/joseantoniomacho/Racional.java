@@ -66,5 +66,7 @@ public class Racional {
             //se resume en:
             this.denominador *= numero.getDenominador();
         }
+        
+        System.out.println("Suma: " + this.numerador + "/" + this.denominador);
     }
 }
