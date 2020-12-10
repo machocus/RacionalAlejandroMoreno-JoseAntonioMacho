@@ -10,5 +10,13 @@ package com.mycompany.racionalalejandromoreno.joseantoniomacho;
  * @author aguil
  */
 public class Relacional {
+    private int numerador;
+    private int denominador;
+
+    public Relacional() {
+       this.numerador = 1;
+       this.denominador = 1;
+    }
+    
     
 }
