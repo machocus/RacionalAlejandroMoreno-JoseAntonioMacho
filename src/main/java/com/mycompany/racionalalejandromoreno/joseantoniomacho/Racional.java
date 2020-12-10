@@ -105,7 +105,7 @@ public class Racional {
         System.out.println("Division: " + this.numerador + "/" + this.denominador);
     }
 
-    public void igualdad(Racional x, Racional y) {
+    public static void igualdad(Racional x, Racional y) {
 
         if (x.getNumerador() * y.getDenominador()/* a*d */
                 == x.getDenominador() * y.getNumerador()) { //b*c

@@ -21,5 +21,7 @@ public class AppRacional {
         k.imprimirConsola();//imprime por pantalla
         ramdom.imprimirConsola();//imprime por pantalla
         
+        Racional.igualdad(z, k); //Imprime por pantalla la igualdad de z entre k
+        
     }
 }
